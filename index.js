@@ -23,7 +23,7 @@ class Neighborhood {
     })
   }
   meals() {
-    const meals = store.deliveries.filter(delivery=> {
+    const meals = this.customers().filter(delivery=> {
       return delivery.neighborhoodId===this.id;
     })
     const uniqueMeals =[...new Set (meals.map(x => x.mealId))]
